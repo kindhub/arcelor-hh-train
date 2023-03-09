@@ -1,0 +1,654 @@
+@import "./../assets/vars";
+@import "./../assets/keyframes";
+@import "../modules/nav";
+
+// BREAKPOINT LAPTOP
+@media (max-width: $ss_laptop) {
+	.container{
+		max-width: 880px;
+	}
+	.wrapper{
+		font-size: 16px;
+	}
+	.nav{
+		margin-left: 15px;
+		&__item{
+			&+&{
+				margin-left: 24px;
+			}
+		}
+	}
+	.s-about{
+		&::before{
+			left: 15px;
+		}
+		&__img-wrapper{
+			&::before{
+				right: -10px;
+				height: 150px;
+			}
+			&::after{
+				width: 598px;
+				bottom: 25px;
+			}
+		}
+	}
+	.stat-card{
+		padding: 40px;
+		&__title{
+			font-size: 52px;
+		}
+	}
+	.s-compound{
+		&__link{
+			padding: 20px 90px 20px 25px;
+		}
+	}
+	.s-social{
+		&__inner{
+			&::after{
+				right: -5px;
+				height: 182px;
+    		bottom: -60px;
+			}
+			&::before{
+				width: 498px;
+				bottom: -40px;
+			}
+		}
+		&__img-wrapper{
+			width: 100%;
+			order: 2;
+			margin-top: 20px;
+		}
+		&__content{
+			width: 100%;
+			order: 1;
+		}
+	}
+	.s-first-screen, .s-big-screen{
+		background-position: center;
+	}
+	.s-map{
+		&__items{
+			width: 33%;
+		}
+	}
+	.s-compound{
+		&__items{
+			width: 39%;
+		}
+		&__img-wrapper{
+			width: 55%;
+		}
+	}
+	.tabs{
+		&__label{
+			width: 23%;
+		}
+	}
+	.titled-image-box{
+		&__image-wrapper{
+			width: 48%;
+		}
+	}
+	.slider-arrows{
+		margin-top: 30px;
+	}
+	.s-gallery{
+		&__inner{
+			flex-wrap: wrap;
+		}
+		&__img-wrapper{
+			&::after{
+				height: 76%;
+			}
+		}
+	}
+}
+
+// BREAKPOINT TABLET
+@media (max-width: $ss_tablet) {
+	.wrapper{
+		font-size: 15px;
+	}
+	.container{
+		padding: 0 15px;
+	}
+	@include nav-module($color_primary, #000);
+	.nav {
+		display: flex;
+		flex-direction: column;
+		&__item {
+			color: #fff;
+			& + & {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+		}
+	}
+	.vacancies-map{
+		&, &-city{
+			display: none;
+		}
+		&__container{
+			width: 280px;
+			margin: 0 auto;
+			display: block;
+		}
+		&-select{
+			&, &__label{
+				display: block;
+			}
+		}
+	}
+	.s-home-main{
+		&__title{
+			font-size: 38px;
+			right: -10px;
+		}
+		&__square{
+			width: 35%;
+			top: calc(50% - 101.5px);
+		}
+		&__logo-wrapper{
+			width: 20%;
+		}
+	}
+	.s-about{
+		&::before{
+			left: 5px;
+		}
+		&__title{
+			&::after{
+				left: -15px;
+				width: 498px;
+			}
+			&::before{
+    		width: 142px;
+    		right: 20px;
+			}
+		}
+		&__img-wrapper{
+			padding-bottom: 65px;
+		}
+	}
+	.stat-card{
+		width: 50%;
+		&:first-child{
+			width: 50%;
+		}
+		&:nth-child(2){
+			border-right: 1px solid #414141;
+		}
+		&:nth-child(4){
+			width: 50%;
+			border-bottom: none;
+			border-left: none;
+		}
+		&:nth-child(5){
+			border-left: 1px solid #414141;
+			border-right: 1px solid #414141;
+		}
+		&:nth-child(6){
+			border-left: none;
+		}
+	}
+	.s-compound{
+		&__inner{
+			flex-wrap: wrap;
+		}
+		&__items{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&__img-wrapper{
+			width: 100%;
+		}
+	}
+	.s-world{
+		.title{
+			margin-bottom: 28px;
+		}
+		&__inner{
+			flex-wrap: wrap;
+			margin-bottom: -40px;
+		}
+		&-item{
+			width: 100%;
+			margin-bottom: 40px;
+			&__title{
+				margin-bottom: 14px;
+			}
+		}
+	}
+	.s-map{
+		.title{
+			margin-bottom: 20px;
+		}
+		&__inner{
+			flex-wrap: wrap;
+		}
+		&__items{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&__link{
+			position: relative;
+			&::before{
+				position: absolute;
+				content: '';
+				background-image: url(/images/elem.svg);
+				width: 13px;
+				height: 20px;
+				right: 10%;
+				opacity: 0.4;
+				transition: all .4s;
+			}
+		}
+	}
+	.s-first-screen{
+		&__title{
+			padding: 65px 0 145px;
+			font-size: 46px;
+		}
+	}
+	.tabs {
+		&__label{
+			&--ml{
+				margin-left: 70px;
+			}
+		}
+		.tab{
+			padding-top: 2em;
+		}
+	}
+	.steel{
+		&__text{
+			padding-bottom: 20px;
+		}
+		&__items{
+			flex-wrap: wrap;
+			&-one{
+				width: 100% !important;
+			}
+			&-two{
+				width: 100% !important;
+			}
+		}
+		&__item{
+			font-size: 19px;
+		}
+	}
+	.s-tabs{
+		&__link{
+			width: 25%;
+			padding-bottom: 20px;
+		}
+	}
+	.s-steel, .s-coal, .s-iron{
+		padding: 40px 0;
+    margin-bottom: 50px;
+	}
+	.coal, .iron{
+		&__inner{
+			flex-wrap: wrap;
+		}
+		&__title{
+			margin-bottom: 10px;
+		}
+		&__content{
+			width: 100%;
+			order: 1;
+			margin-bottom: 20px;
+		}
+		&__img-wrapper{
+			width: 100%;
+			order: 2;
+		}
+	}
+	.s-temirtau{
+		&__inner{
+			flex-wrap: wrap;
+			margin-top: 22px;
+		}
+		&__content{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&__img-wrapper{
+			width: 100%;
+		}
+	}
+	.s-big-screen{
+		&::before{
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+		}
+		&__content{
+			padding: 110px 0 170px;
+		}
+	}
+	.icon-card{
+		width: 49%;
+		margin-bottom: 15px;
+	}
+	.s-philosophy{
+		&__cards{
+			margin-bottom: -15px;
+		}
+	}
+	.titled-image-box{
+		flex-wrap: wrap;
+		&__image-wrapper{
+			width: 100%;
+			order: 2;
+		}
+		&__content{
+			width: 100%;
+			order: 1;
+			margin-bottom: 20px;
+		}
+	}
+	.s-gallery{
+		&__inner{
+			margin-top: 18px;
+		}
+		&__content{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&__img-wrapper{
+			width: 100%;
+			justify-content: start;
+			&::after{
+				height: 100%;
+			}	
+		}
+	}
+}
+
+// BREAKPOINT SM TABLET
+@media (max-width: $ss_sm_tablet) {
+	.wrapper{
+		font-size: 14px;
+	}
+	.s-home-main{
+		&__title{
+			letter-spacing: 0.235em;
+		}
+		&__square{
+			width: 30%;
+			top: calc(50% - 90.5px);
+		}
+	}
+	.title{
+		&--mb {
+			&-short {
+				margin-bottom: 20px;
+			}
+			&-medium-short {
+				margin-bottom: 26px;
+			}
+			&-medium {
+				margin-bottom: 36px;
+			}
+			&-long {
+				margin-bottom: 50px;
+			}
+		}
+	}
+	.stat-card{
+		padding: 20px;
+		&__title{
+			font-size: 42px;
+		}
+	}
+	.s-social{
+		&__inner{
+			&::after{
+				height: 122px;
+    		bottom: -35px;
+			}
+			&::before{
+				width: 398px;
+				bottom: -20px;
+			}
+		}
+	}
+	.video{
+		&__play-btn{
+			font-size: 3em;
+		}
+	}
+	.s-territory{
+		&__img-wrapper{
+			margin-bottom: 25px;
+		}
+	}
+	.s-big-screen{
+		&__content{
+			padding: 85px 0 125px;
+		}
+	}
+	.icon-card{
+    padding: 30px 25px;
+	}
+	.s-gallery{
+		&__img-wrapper{
+			&::after{
+				background-position: bottom;
+			}
+		}
+	}
+}
+
+// BREAKPOINT PHONE
+@media (max-width: $ss_phone) {
+	.wrapper{
+		width: calc(100% + 30px);
+		margin: 0 -15px;
+	}
+	.header{
+		padding: 20px 0;
+	}
+	.s-home-main{
+		&__title{
+			font-size: 30px;
+			letter-spacing: 0.09em;
+			right: -4px;
+		}
+		&__square{
+			top: calc(50% - 64.5px);
+		}
+	}
+	.s-about{
+		&::before{
+			height: 415px;
+			top: -5px;
+		}
+		&__title{
+			&::after{
+				width: 310px;
+			}
+		}
+		&__text{
+			margin-bottom: 25px;
+			p+p{
+				margin-top: 15px;
+			}
+		}
+		&__img-wrapper{
+			padding-bottom: 10px;
+			&::after{
+				bottom: 0;
+				width: 270px;
+			}
+			&::before{
+				height: 80px;
+				bottom: -10px;
+			}
+		}
+	}
+	.stat-card{
+		width: 100%;
+		&:first-child{
+			width: 100%;
+		}
+		&:nth-child(2){
+			border-left: 1px solid #414141;
+		}
+		&:nth-child(4){
+			width: 100%;
+			border-left: 1px solid #414141;
+		}
+		&:nth-child(5){
+			border-bottom: none;
+		}
+		&:nth-child(6){
+			border-left: 1px solid #414141;
+		}
+	}
+	.title{
+		font-size: 26px;
+		&--mb {
+			&-short {
+				margin-bottom: 16px;
+			}
+			&-medium-short {
+				margin-bottom: 20px;
+			}
+			&-medium {
+				margin-bottom: 26px;
+			}
+			&-long {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	.s-compound{
+		&__items{
+			margin-bottom: 10px;
+		}
+		&__link{
+			padding: 20px 44px 20px 15px;
+			&::before{
+				right: 5%;
+			}
+		}
+	}
+	.s-social{
+		&__inner{
+			&::after{
+				height: 122px;
+    		bottom: -35px;
+			}
+			&::before{
+				width: 298px;
+				bottom: -20px;
+			}
+		}
+	}
+	.s-world{
+		.title{
+			margin-bottom: 22px;
+		}
+		&__inner{
+			margin-bottom: -20px;
+		}
+		&-item{
+			margin-bottom: 20px;
+			&__title{
+				font-size: 20px;
+			}
+			&__text{
+				p+p{
+    			margin-top: 12px;
+				}
+			}
+		}
+	}
+	.s-map{
+		&__link{
+			padding: 20px 10px;
+			&::before{
+				right: 5%;
+			}
+		}
+	}
+	.s-first-screen{
+		&__nav{
+			&:first-child{
+				margin-right: 8px;
+			}
+		}
+		&__title{
+			padding: 60px 0 85px;
+			font-size: 36px;
+		}
+		&::before{
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+		}
+	}
+	.tabs {
+		&__label{
+			&--ml{
+				margin-left: 30px;
+			}
+		}
+	}
+	.s-steel, .s-coal, .s-iron{
+    padding: 25px 0;
+    margin-bottom: 30px;
+	}
+	.s-tabs{
+		&__link{
+			width: 30%;
+		}
+	}
+	.s-production{
+		&::before{
+			top: 5%;
+		}
+	}
+	.s-temirtau{
+		&__title-mini{
+			font-size: 20px !important;
+		}
+	}
+	.s-big-screen{
+		&__content{
+			padding: 50px 0 75px;
+		}
+		&__title{
+			font-size: 32px;
+			opacity: 0.9;
+			margin-bottom: 15px;
+		}
+		&__btn{
+			padding: 13px 75px 13px 40px;
+			width: 200px;
+		}
+	}
+	.icon-card{
+		width: 100%;
+	}
+	.s-university{
+		&__img-warpper{
+			margin-bottom: 20px;
+		}
+		&__text{
+			p+p{
+				margin-top: 10px;
+			}
+		}
+	}
+	.s-gallery{
+		&__title{
+			font-size: 18px;
+		}
+	}
+}

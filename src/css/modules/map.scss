@@ -1,0 +1,163 @@
+@mixin map-module($area_fill, $area_hover_fill, $point_color){
+	#gradient {
+		--color-stop-1: #74197B;
+		--color-stop-2: #B32D6B;
+		--color-stop-3: #D13B54;
+		--color-stop-4: #E8614C;
+		--color-stop-5: #F3B364;
+	}
+	.map{
+		position: relative;
+		width: 92.2%;
+		// margin: 0 auto;
+		&::before{
+			content: '';
+			display: block;
+			padding-bottom: 54.4%;
+			width: 100%;
+		}
+		&__visual{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		&__area{
+			width: 100%;
+			fill: $area_fill;
+			transition: fill 0.4s;
+			cursor: pointer;
+			&:hover{
+				fill: url(#gradient);
+				opacity: 0.6;
+			}
+		}
+		&-city{
+			position: absolute;
+			width: 1.1em;
+			height: 1.1em;
+			cursor: pointer;
+			&__name{
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				margin-left: 1.5em;
+				white-space: nowrap;
+				transition: all .4s;
+				background: #FFFFFF;
+				box-shadow: 0px 25px 20px rgba(84, 84, 84, 0.15);
+				border-radius: 25px;
+				padding: 5px 20px;
+			}
+			&:hover{
+				color: $color_primary;
+			}
+			&--almaty{
+        left: 71.9%;
+        top: 72%;    
+			}
+			&--taraz{
+				left: 61%;
+				top: 78%;
+			}
+			&--shymkent{
+				left: 54%;
+				top: 89%;
+			}
+			&--kyzylorda{
+				left: 46%;
+				top: 70%;
+			}
+			&--zhanaozen{
+				left: 18%;
+				top: 82%;
+			}
+			&--aktau{
+				left: 9%;
+				top: 74%;
+			}
+			&--atyray{
+        left: 8%;
+        top: 54%;
+			}
+			&--uralsk{
+				left: 13%;
+				top: 33%;
+			}
+			&--aktobe{
+        left: 25%;
+        top: 46%;
+			}
+			&--rudnyi{
+				left: 40%;
+				top: 24%;
+			}
+			&--kostanay{
+				left: 43%;
+				top: 15%;
+			}
+			&--petropavlovsk{
+				left: 56%;
+				top: 3%;
+			}
+			&--kokshetau{
+				left: 57%;
+				top: 16%;
+			}
+			&--pavlodar{
+				left: 74%;
+				top: 16%;
+			}
+			&--ekibastuz{
+				left: 71%;
+				top: 24%;
+			}
+			&--nur-sultan{
+				left: 60%;
+				top: 28%;
+			}
+			&--zhezkazgan{
+				left: 50%;
+				top: 48%;
+			}
+			&--karaganda{
+				left: 53%;
+				top: 45%;
+			}
+			&--saran{
+				left: 39%;
+				top: 43%;
+			}
+			&--temirtau{
+				left: 63%;
+				top: 35%;
+			}
+			&--schakhtinsk{
+				left: 37%;
+				top: 56%;
+			}
+			&--abay{
+				left: 60%;
+				top: 58%;
+			}
+			&--lisakovsk{
+				left: 33%;
+				top: 31%;
+			}
+			&--stepnogorsk{
+				left: 48%;
+				top: 26%;
+			}
+			&--semei{
+				left: 81%;
+				top: 34%;
+			}
+			&--ust-kamenogorsk{
+				left: 87%;
+				top: 41%;
+			}
+		}
+	}
+}
